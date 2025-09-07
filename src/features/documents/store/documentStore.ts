@@ -57,7 +57,7 @@ export const useDocumentStore = create<DocumentStore>((set, get) => ({
     return newDocument.id;
   },
 
-  updateDocument: (id: string, content: string) => {
+  updateDocument: (id: string, content: string, saveToStorage: boolean = true) => {
     set((state) => {
       const updatedDocuments = state.documents.map((doc) =>
         doc.id === id
@@ -69,7 +69,9 @@ export const useDocumentStore = create<DocumentStore>((set, get) => ({
         ? { ...state.currentDocument, content, lastModified: new Date() }
         : state.currentDocument;
 
-      saveDocumentsToStorage(updatedDocuments);
+      if (saveToStorage) {
+        saveDocumentsToStorage(updatedDocuments);
+      }
       
       return {
         documents: updatedDocuments,
@@ -78,7 +80,7 @@ export const useDocumentStore = create<DocumentStore>((set, get) => ({
     });
   },
 
-  updateDocumentTitle: (id: string, title: string) => {
+  updateDocumentTitle: (id: string, title: string, saveToStorage: boolean = true) => {
     set((state) => {
       const updatedDocuments = state.documents.map((doc) =>
         doc.id === id
@@ -90,7 +92,9 @@ export const useDocumentStore = create<DocumentStore>((set, get) => ({
         ? { ...state.currentDocument, title, lastModified: new Date() }
         : state.currentDocument;
 
-      saveDocumentsToStorage(updatedDocuments);
+      if (saveToStorage) {
+        saveDocumentsToStorage(updatedDocuments);
+      }
       
       return {
         documents: updatedDocuments,

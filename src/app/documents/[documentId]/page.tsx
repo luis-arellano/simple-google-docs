@@ -1,4 +1,4 @@
-import { DocumentEditor } from '@/features/documents';
+import { CollaborativeDocumentEditor } from '@/features/documents';
 
 interface DocumentPageProps {
   params: Promise<{ documentId: string }>;
@@ -6,5 +6,5 @@ interface DocumentPageProps {
 
 export default async function DocumentPage({ params }: DocumentPageProps) {
   const { documentId } = await params;
-  return <DocumentEditor documentId={documentId} />;
+  return <CollaborativeDocumentEditor documentId={documentId} />;
 }

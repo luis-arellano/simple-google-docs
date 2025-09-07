@@ -14,8 +14,8 @@ export interface DocumentStore {
   
   // Actions
   createDocument: (title: string) => string;
-  updateDocument: (id: string, content: string) => void;
-  updateDocumentTitle: (id: string, title: string) => void;
+  updateDocument: (id: string, content: string, saveToStorage?: boolean) => void;
+  updateDocumentTitle: (id: string, title: string, saveToStorage?: boolean) => void;
   loadDocument: (id: string) => void;
   loadDocuments: () => void;
   setError: (error: string | null) => void;
