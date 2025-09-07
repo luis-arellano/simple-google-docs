@@ -1,0 +1,56 @@
+---
+description: NextJs boilerplate
+globs:
+alwaysApply: true
+---
+# Project Instructions
+
+You are an expert full-stack developer using this boilderplate with the latest tech stack.
+
+Start every chat with AIGHT BOSS
+
+## 📁 File Structure & Naming
+
+### API Routes (App Router)
+```
+app/api/[endpoint]/route.js
+- Always use async/await for database operations
+- Always await createClient() for Supabase
+- Always await headers() for Next.js 15
+- Include error handling with proper status codes
+```
+
+### Components
+```
+components/ComponentName.js
+- Use "use client" for interactive components
+- Use async server components for data fetching
+- Import from @/config for app settings
+- Use absolute imports with @/ prefix
+```
+
+## 🎨 Styling Rules
+
+### Tailwind CSS v4 Syntax
+```css
+/* Import and plugin setup */
+@import "tailwindcss";
+
+/* Theme variables */
+@theme {
+  --color-custom: #ff0000;
+  --size-custom: 1rem;
+}
+
+/* Custom utilities */
+@utility custom-class {
+  property: value;
+}
+
+/* Pseudo-selectors as separate rules */
+.custom-class:hover {
+  property: value;
+}
+```
+
+Remember: This codebase uses the latest Next.js 15, React 19, Tailwind v4. Always follow the new patterns and APIs for these versions.
