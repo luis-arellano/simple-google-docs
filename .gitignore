@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python virtual environment
+flask-server/venv/
+flask-server/__pycache__/
+flask-server/*.pyc
+flask-server/*.pyo
+flask-server/*.pyd
+flask-server/.Python

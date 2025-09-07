@@ -13,14 +13,17 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/gists"
+            href="/documents"
             className="px-8 py-3 bg-foreground text-background rounded-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            📝 Collaborative Documents
+          </Link>
+          <Link
+            href="/gists"
+            className="px-8 py-3 border border-foreground/20 text-foreground rounded-lg font-medium hover:bg-foreground/5 transition-colors"
           >
             🔍 Explore GitHub Gists
           </Link>
-          <button className="px-8 py-3 border border-foreground/20 text-foreground rounded-lg font-medium hover:bg-foreground/5 transition-colors">
-            Learn More
-          </button>
         </div>
         
         {/* Feature showcase */}
